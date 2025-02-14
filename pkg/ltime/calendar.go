@@ -64,10 +64,10 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 
 	if leapYear {
 		switch month {
-		case "January":
+		case "january", "jan", "01":
 			lizMonth = "Menotheen"
 			lizDay = day
-		case "February":
+		case "february", "feb", "02":
 			if day <= 6 {
 				lizMonth = "Menotheen"
 				lizDay = day + 30
@@ -75,7 +75,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Lengten"
 				lizDay = day - 5
 			}
-		case "March":
+		case "march", "mar", "03":
 			if day <= 13 {
 				lizMonth = "Lengten"
 				lizDay = day + 24
@@ -83,7 +83,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Regen"
 				lizDay = day - 13
 			}
-		case "April":
+		case "april", "apr", "04":
 			if day <= 18 {
 				lizMonth = "Regen"
 				lizDay = day + 18
@@ -91,7 +91,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Leorar"
 				lizDay = day - 18
 			}
-		case "May":
+		case "may", "05":
 			if day <= 25 {
 				lizMonth = "Leorar"
 				lizDay = day + 12
@@ -99,13 +99,13 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Mysund"
 				lizDay = day - 25
 			}
-		case "June":
+		case "june", "jun", "06":
 			lizMonth = "Mysund"
 			lizDay = day + 6
-		case "July":
+		case "july", "jul", "07":
 			lizMonth = "Heisswerm"
 			lizDay = day
-		case "August":
+		case "august", "aug", "08":
 			if day <= 6 {
 				lizMonth = "Heisswerm"
 				lizDay = day + 31
@@ -113,7 +113,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Largaheiss"
 				lizDay = day - 6
 			}
-		case "September":
+		case "september", "sept", "sep", "09":
 			if day <= 11 {
 				lizMonth = "Largaheiss"
 				lizDay = day + 25
@@ -121,7 +121,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Pommois"
 				lizDay = day - 11
 			}
-		case "October":
+		case "october", "oct", "10":
 			if day <= 18 {
 				lizMonth = "Pommois"
 				lizDay = day + 19
@@ -129,7 +129,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Spinnan"
 				lizDay = day - 18
 			}
-		case "November":
+		case "november", "nov", "11":
 			if day <= 23 {
 				lizMonth = "Spinnan"
 				lizDay = day + 13
@@ -137,16 +137,16 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Kalt"
 				lizDay = day - 23
 			}
-		case "December":
+		case "december", "dec", "12":
 			lizMonth = "Kalt"
 			lizDay = day + 7
 		}
 	} else {
 		switch month {
-		case "January":
+		case "january", "jan", "01":
 			lizMonth = "Menotheen"
 			lizDay = day
-		case "February":
+		case "february", "feb", "02":
 			if day <= 5 {
 				lizMonth = "Menotheen"
 				lizDay = day + 31
@@ -154,7 +154,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Lengten"
 				lizDay = day - 5
 			}
-		case "March":
+		case "march", "mar", "03":
 			if day <= 14 {
 				lizMonth = "Lengten"
 				lizDay = day + 23
@@ -162,7 +162,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Regen"
 				lizDay = day - 14
 			}
-		case "April":
+		case "april", "apr", "04":
 			if day <= 19 {
 				lizMonth = "Regen"
 				lizDay = day + 17
@@ -170,7 +170,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Leorar"
 				lizDay = day - 19
 			}
-		case "May":
+		case "05", "may":
 			if day <= 26 {
 				lizMonth = "Leorar"
 				lizDay = day + 11
@@ -178,10 +178,10 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Mysund"
 				lizDay = day - 26
 			}
-		case "June":
+		case "june", "jun", "06":
 			lizMonth = "Mysund"
 			lizDay = day + 5
-		case "July":
+		case "july", "jul", "07":
 			if day == 1 {
 				lizMonth = "Mysund"
 				lizDay = 36
@@ -189,7 +189,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Heisswerm"
 				lizDay = day - 1
 			}
-		case "August":
+		case "august", "aug", "08":
 			if day <= 7 {
 				lizMonth = "Heisswerm"
 				lizDay = day + 30
@@ -197,7 +197,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Largaheiss"
 				lizDay = day - 7
 			}
-		case "September":
+		case "september", "sept", "sep", "09":
 			if day <= 12 {
 				lizMonth = "Largaheiss"
 				lizDay = day + 24
@@ -205,7 +205,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Pommois"
 				lizDay = day - 12
 			}
-		case "October":
+		case "october", "oct", "10":
 			if day <= 19 {
 				lizMonth = "Pommois"
 				lizDay = day + 18
@@ -213,7 +213,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Spinnan"
 				lizDay = day - 19
 			}
-		case "November":
+		case "november", "nov", "11":
 			if day <= 24 {
 				lizMonth = "Spinnan"
 				lizDay = day + 12
@@ -221,7 +221,7 @@ func GetDayMonth(year int, month string, day int) (string, int) {
 				lizMonth = "Kalt"
 				lizDay = day - 24
 			}
-		case "December":
+		case "december", "dec", "12":
 			lizMonth = "Kalt"
 			lizDay = day + 6
 		}
